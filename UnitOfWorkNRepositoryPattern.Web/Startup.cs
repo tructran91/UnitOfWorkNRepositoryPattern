@@ -4,9 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UnitOfWorkNRepositoryPattern.Data.Models;
+using UnitOfWorkNRepositoryPattern.Repos;
+using UnitOfWorkNRepositoryPattern.Repos.Contracts;
 
 namespace UnitOfWorkNRepositoryPattern.Web
 {
@@ -22,6 +26,12 @@ namespace UnitOfWorkNRepositoryPattern.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MovieDBContext>(option =>
+                option.UseSqlServer(Configuration.GetConnectionString("MovieDB")));
+
+            //services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+            //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
             services.AddControllersWithViews();
         }
 

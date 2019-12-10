@@ -1,0 +1,11 @@
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\bin\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.deps.json
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\bin\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.dll
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\bin\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.pdb
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.csprojAssemblyReference.cache
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.AssemblyInfoInputs.cache
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.AssemblyInfo.cs
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.dll
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.pdb
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\bin\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Data.dll
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\bin\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Data.pdb
+C:\Users\tt.admin\Documents\RnD\UnitOfWorkNRepositoryPattern.git\trunk\UnitOfWorkNRepositoryPattern.Repos\obj\Debug\netcoreapp3.0\UnitOfWorkNRepositoryPattern.Repos.csproj.CopyComplete

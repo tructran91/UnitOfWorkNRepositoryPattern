@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UnitOfWorkNRepositoryPattern.Data.Models.Movie>
+@{
+    ViewData["Title"] = "MovieDetailView";
+}
+
+<h1>Detail</h1>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Release</th>
+            <th>Director</th>
+            <th>Rating</th>
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.Genre.Name</td>
+                <td>@movie.ReleaseDate</td>
+                <td>@string.Format("{0} {1}", movie.Director.FirstName, movie.Director.LastName)</td>
+                <td>
+                    @for (int i = 0; i < movie.Rating; i++)
+                    {
+                        <span>* </span>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

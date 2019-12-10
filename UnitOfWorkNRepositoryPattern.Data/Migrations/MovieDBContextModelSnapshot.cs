@@ -35,6 +35,38 @@ namespace UnitOfWorkNRepositoryPattern.Data.Migrations
                     b.HasKey("DirectorId");
 
                     b.ToTable("Director");
+
+                    b.HasData(
+                        new
+                        {
+                            DirectorId = 1,
+                            FirstName = "Steven",
+                            LastName = "Spielberg"
+                        },
+                        new
+                        {
+                            DirectorId = 2,
+                            FirstName = "James",
+                            LastName = "Cameron"
+                        },
+                        new
+                        {
+                            DirectorId = 3,
+                            FirstName = "Martin",
+                            LastName = "Scorsese"
+                        },
+                        new
+                        {
+                            DirectorId = 4,
+                            FirstName = "Quentin",
+                            LastName = "Tarantino"
+                        },
+                        new
+                        {
+                            DirectorId = 5,
+                            FirstName = "Christopher",
+                            LastName = "Nolan"
+                        });
                 });
 
             modelBuilder.Entity("UnitOfWorkNRepositoryPattern.Data.Models.Genre", b =>
@@ -50,6 +82,23 @@ namespace UnitOfWorkNRepositoryPattern.Data.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genre");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = 1,
+                            Name = "Hành động"
+                        },
+                        new
+                        {
+                            GenreId = 2,
+                            Name = "Hoạt hình"
+                        },
+                        new
+                        {
+                            GenreId = 3,
+                            Name = "Adult"
+                        });
                 });
 
             modelBuilder.Entity("UnitOfWorkNRepositoryPattern.Data.Models.Movie", b =>
@@ -84,6 +133,108 @@ namespace UnitOfWorkNRepositoryPattern.Data.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Movie");
+
+                    b.HasData(
+                        new
+                        {
+                            MovieId = 1,
+                            DirectorId = 1,
+                            GenreId = 1,
+                            Language = "English",
+                            Rating = 5,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(677),
+                            Title = "Nhà tù Shawshank (The Shawshank Redemption)"
+                        },
+                        new
+                        {
+                            MovieId = 2,
+                            DirectorId = 1,
+                            GenreId = 1,
+                            Language = "Vietnamese",
+                            Rating = 5,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6718),
+                            Title = "Bố già (The Godfather)"
+                        },
+                        new
+                        {
+                            MovieId = 3,
+                            DirectorId = 2,
+                            GenreId = 1,
+                            Language = "Vietnamese",
+                            Rating = 4,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6780),
+                            Title = "Bố già phần II (The Godfather Part II)"
+                        },
+                        new
+                        {
+                            MovieId = 4,
+                            DirectorId = 2,
+                            GenreId = 2,
+                            Language = "Vietnamese",
+                            Rating = 5,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6780),
+                            Title = "Kỵ sĩ bóng đêm (The Dark Knight)"
+                        },
+                        new
+                        {
+                            MovieId = 5,
+                            DirectorId = 3,
+                            GenreId = 2,
+                            Language = "Vietnamese",
+                            Rating = 3,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6780),
+                            Title = "12 người đàn ông giận dữ (12 Angry Men)"
+                        },
+                        new
+                        {
+                            MovieId = 6,
+                            DirectorId = 3,
+                            GenreId = 3,
+                            Language = "Vietnamese",
+                            Rating = 3,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6780),
+                            Title = "Bản danh sách của Schindler (Schindler's List)"
+                        },
+                        new
+                        {
+                            MovieId = 7,
+                            DirectorId = 4,
+                            GenreId = 3,
+                            Language = "Vietnamese",
+                            Rating = 4,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6783),
+                            Title = "Chúa tể những chiếc nhẫn: Sự trở lại của nhà vua (Lord of the Rings: The Return of the King)"
+                        },
+                        new
+                        {
+                            MovieId = 8,
+                            DirectorId = 5,
+                            GenreId = 1,
+                            Language = "English",
+                            Rating = 3,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6791),
+                            Title = "Chuyện Tào Lao (Pulp Fiction)"
+                        },
+                        new
+                        {
+                            MovieId = 9,
+                            DirectorId = 5,
+                            GenreId = 2,
+                            Language = "English",
+                            Rating = 5,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6840),
+                            Title = "Thiện, ác, tà (The Good, the Bad and the Ugly)"
+                        },
+                        new
+                        {
+                            MovieId = 10,
+                            DirectorId = 5,
+                            GenreId = 1,
+                            Language = "English",
+                            Rating = 5,
+                            ReleaseDate = new DateTime(2019, 11, 28, 16, 29, 43, 915, DateTimeKind.Local).AddTicks(6844),
+                            Title = "Sàn đấu sinh tử (Fight Club)"
+                        });
                 });
 
             modelBuilder.Entity("UnitOfWorkNRepositoryPattern.Data.Models.Movie", b =>
