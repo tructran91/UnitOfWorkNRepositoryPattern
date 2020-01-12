@@ -29,8 +29,8 @@ namespace UnitOfWorkNRepositoryPattern.Web
             services.AddDbContext<MovieDBContext>(option =>
                 option.UseSqlServer(Configuration.GetConnectionString("MovieDB")));
 
-            //services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
-            //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddControllersWithViews();
         }

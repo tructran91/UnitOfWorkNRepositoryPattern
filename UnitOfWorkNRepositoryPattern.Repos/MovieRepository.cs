@@ -7,11 +7,11 @@ using UnitOfWorkNRepositoryPattern.Repos.Contracts;
 
 namespace UnitOfWorkNRepositoryPattern.Repos
 {
-    public class MovieGenericRepository: GenericRepository<Movie>, IMovieRepository
+    public class MovieRepository: GenericRepository<Movie>, IMovieRepository
     {
         private readonly MovieDBContext _dbContext;
 
-        public MovieGenericRepository(MovieDBContext context) : base(context)
+        public MovieRepository(MovieDBContext context) : base(context)
         {
             _dbContext = context;
         }
@@ -19,6 +19,7 @@ namespace UnitOfWorkNRepositoryPattern.Repos
         public IEnumerable<Movie> GetTopMoviesInAYear(int year, int count)
         {
             return GetAll()
+                //.Include(m => m.Director).Include(m => m.Genre)
                 .Where(t => t.ReleaseDate.Value.Year.Equals(year))
                 .OrderByDescending(t => t.Rating)
                 .Take(count)

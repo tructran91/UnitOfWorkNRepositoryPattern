@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj": {}
+    "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj": {
+    "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj",
         "projectName": "UnitOfWorkNRepositoryPattern.Data",
-        "projectPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj",
-        "packagesPath": "C:\\Users\\tt.admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\obj\\",
+        "projectPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj",
+        "packagesPath": "C:\\Users\\Truc Tran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tt.admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Truc Tran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,29 +65,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj": {
+    "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj",
+        "projectUniqueName": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj",
         "projectName": "UnitOfWorkNRepositoryPattern.Repos",
-        "projectPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj",
-        "packagesPath": "C:\\Users\\tt.admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\obj\\",
+        "projectPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj",
+        "packagesPath": "C:\\Users\\Truc Tran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tt.admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Truc Tran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +111,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj": {
-                "projectPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj"
+              "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj": {
+                "projectPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Data\\UnitOfWorkNRepositoryPattern.Data.csproj"
               }
             }
           }
@@ -117,6 +125,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -127,29 +141,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj": {
+    "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj",
         "projectName": "UnitOfWorkNRepositoryPattern.Web",
-        "projectPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj",
-        "packagesPath": "C:\\Users\\tt.admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Web\\obj\\",
+        "projectPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Web\\UnitOfWorkNRepositoryPattern.Web.csproj",
+        "packagesPath": "C:\\Users\\Truc Tran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Web\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tt.admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Truc Tran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,8 +187,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj": {
-                "projectPath": "C:\\Users\\tt.admin\\Documents\\RnD\\UnitOfWorkNRepositoryPattern.git\\trunk\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj"
+              "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj": {
+                "projectPath": "C:\\Users\\Truc Tran\\Documents\\RnD\\UnitOfWorkNRepositoryPattern\\UnitOfWorkNRepositoryPattern.Repos\\UnitOfWorkNRepositoryPattern.Repos.csproj"
               }
             }
           }
@@ -180,6 +205,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -206,6 +235,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -214,7 +261,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

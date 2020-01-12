@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using UnitOfWorkNRepositoryPattern.Data.Models;
 using UnitOfWorkNRepositoryPattern.Repos.Contracts;
 
@@ -9,23 +6,64 @@ namespace UnitOfWorkNRepositoryPattern.Repos
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly MovieDBContext _dbContext;
-        public MovieGenericRepository MovieGenericRepository { get; set; }
+        private MovieDBContext _context;
+        private IGenericRepository<Movie> _movieRepository;
+        private IGenericRepository<Director> _directorRepository;
+        private IGenericRepository<Genre> _genreRepository;
+        private string _errorMessage = string.Empty;
 
         public UnitOfWork(MovieDBContext context)
         {
-            _dbContext = context;
-            MovieGenericRepository = new MovieGenericRepository(_dbContext);
+            _context = context;
         }
 
-        public async Task Commit()
+        public IGenericRepository<Movie> MovieRepository
         {
-            await _dbContext.SaveChangesAsync();
+            get
+            {
+                return _movieRepository ?? (_movieRepository = new GenericRepository<Movie>(_context));
+            }
+        }
+
+        public IGenericRepository<Director> DirectorRepository
+        {
+            get
+            {
+                return _directorRepository ?? (_directorRepository = new GenericRepository<Director>(_context));
+            }
+        }
+
+        public IGenericRepository<Genre> GenreRepository
+        {
+            get
+            {
+                return _genreRepository ?? (_genreRepository = new GenericRepository<Genre>(_context));
+            }
+        }
+
+        public void Commit()
+        {
+            _context.SaveChanges();
+        }
+
+        private bool disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    _context.Dispose();
+                }
+            }
+            disposed = true;
         }
 
         public void Dispose()
         {
-            _dbContext.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
