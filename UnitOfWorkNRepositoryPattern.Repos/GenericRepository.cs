@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
 using UnitOfWorkNRepositoryPattern.Data.Models;
 using UnitOfWorkNRepositoryPattern.Repos.Contracts;
@@ -37,7 +35,7 @@ namespace UnitOfWorkNRepositoryPattern.Repos
             if (orderBy != null)
                 query = orderBy(query);
 
-            return query.ToList();
+            return query;
         }
 
         public virtual IQueryable<TEntity> Query(

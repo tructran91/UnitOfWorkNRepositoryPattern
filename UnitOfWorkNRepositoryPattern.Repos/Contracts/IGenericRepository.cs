@@ -8,6 +8,8 @@ namespace UnitOfWorkNRepositoryPattern.Repos.Contracts
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
+        #region Search Operations
+
         /// <summary>
         /// Get all entities from db
         /// </summary>
@@ -53,6 +55,10 @@ namespace UnitOfWorkNRepositoryPattern.Repos.Contracts
         /// <returns></returns>
         IEnumerable<TEntity> GetAll();
 
+        #endregion Search Operations
+
+        #region CRUD Operations
+
         /// <summary>
         /// Add entity to db
         /// </summary>
@@ -76,5 +82,7 @@ namespace UnitOfWorkNRepositoryPattern.Repos.Contracts
         /// </summary>
         /// <param name="entityToDelete"></param>
         void Delete(TEntity entityToDelete);
+
+        #endregion CRUD Operations
     }
 }

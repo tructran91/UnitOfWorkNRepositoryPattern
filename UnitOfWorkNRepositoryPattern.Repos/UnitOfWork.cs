@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnitOfWorkNRepositoryPattern.Data.Models;
 using UnitOfWorkNRepositoryPattern.Repos.Contracts;
 
@@ -7,38 +9,23 @@ namespace UnitOfWorkNRepositoryPattern.Repos
     public class UnitOfWork : IUnitOfWork
     {
         private MovieDBContext _context;
-        private IGenericRepository<Movie> _movieRepository;
-        private IGenericRepository<Director> _directorRepository;
-        private IGenericRepository<Genre> _genreRepository;
-        private string _errorMessage = string.Empty;
+        private Dictionary<Type, object> _repositories = new Dictionary<Type, object>();
 
         public UnitOfWork(MovieDBContext context)
         {
             _context = context;
         }
 
-        public IGenericRepository<Movie> MovieRepository
+        public IGenericRepository<T> Repository<T>() where T : class
         {
-            get
+            if (_repositories.Keys.Contains(typeof(T)) == true)
             {
-                return _movieRepository ?? (_movieRepository = new GenericRepository<Movie>(_context));
+                return _repositories[typeof(T)] as IGenericRepository<T>;
             }
-        }
 
-        public IGenericRepository<Director> DirectorRepository
-        {
-            get
-            {
-                return _directorRepository ?? (_directorRepository = new GenericRepository<Director>(_context));
-            }
-        }
-
-        public IGenericRepository<Genre> GenreRepository
-        {
-            get
-            {
-                return _genreRepository ?? (_genreRepository = new GenericRepository<Genre>(_context));
-            }
+            IGenericRepository<T> repo = new GenericRepository<T>(_context);
+            _repositories.Add(typeof(T), repo);
+            return repo;
         }
 
         public void Commit()

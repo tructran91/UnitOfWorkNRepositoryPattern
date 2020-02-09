@@ -21,7 +21,7 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
         // GET: Movies
         public IActionResult Index()
         {
-            var movies = _unitOfWork.MovieRepository.Get(null, t => t.OrderBy(x => x.Title)).ToList();
+            var movies = _unitOfWork.Repository<Movie>().Get(null, t => t.OrderBy(x => x.Title)).ToList();
             return View(movies);
         }
 
@@ -33,7 +33,7 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
                 return NotFound();
             }
 
-            var movie = _unitOfWork.MovieRepository
+            var movie = _unitOfWork.Repository<Movie>()
                 .Get(t => t.MovieId == id.Value, null, t => t.Director, t => t.Genre).FirstOrDefault();
             if (movie == null)
             {
@@ -46,8 +46,8 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
-            ViewBag.Director = new SelectList(_unitOfWork.DirectorRepository.GetAll().ToList(), "DirectorId", "FirstName");
-            ViewBag.Genre = new SelectList(_unitOfWork.GenreRepository.GetAll().ToList(), "GenreId", "Name");
+            ViewBag.Director = new SelectList(_unitOfWork.Repository<Director>().GetAll().ToList(), "DirectorId", "FirstName");
+            ViewBag.Genre = new SelectList(_unitOfWork.Repository<Genre>().GetAll().ToList(), "GenreId", "Name");
             return View();
         }
 
@@ -60,12 +60,12 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.MovieRepository.Add(movie);
+                _unitOfWork.Repository<Movie>().Add(movie);
                 _unitOfWork.Commit();
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.Director = new SelectList(_unitOfWork.DirectorRepository.GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
-            ViewBag.Genre = new SelectList(_unitOfWork.GenreRepository.GetAll().ToList(), "GenreId", "Name", movie.GenreId);
+            ViewBag.Director = new SelectList(_unitOfWork.Repository<Director>().GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
+            ViewBag.Genre = new SelectList(_unitOfWork.Repository<Genre>().GetAll().ToList(), "GenreId", "Name", movie.GenreId);
             return View(movie);
         }
 
@@ -77,13 +77,13 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
                 return NotFound();
             }
 
-            var movie = _unitOfWork.MovieRepository.GetById(id.Value);
+            var movie = _unitOfWork.Repository<Movie>().GetById(id.Value);
             if (movie == null)
             {
                 return NotFound();
             }
-            ViewBag.Director = new SelectList(_unitOfWork.DirectorRepository.GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
-            ViewBag.Genre = new SelectList(_unitOfWork.GenreRepository.GetAll().ToList(), "GenreId", "Name", movie.GenreId);
+            ViewBag.Director = new SelectList(_unitOfWork.Repository<Director>().GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
+            ViewBag.Genre = new SelectList(_unitOfWork.Repository<Genre>().GetAll().ToList(), "GenreId", "Name", movie.GenreId);
             return View(movie);
         }
 
@@ -103,12 +103,12 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
             {
                 try
                 {
-                    _unitOfWork.MovieRepository.Update(movie);
+                    _unitOfWork.Repository<Movie>().Update(movie);
                     _unitOfWork.Commit();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (_unitOfWork.MovieRepository.GetById(movie.MovieId) == null)
+                    if (_unitOfWork.Repository<Movie>().GetById(movie.MovieId) == null)
                     {
                         return NotFound();
                     }
@@ -119,8 +119,8 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.Director = new SelectList(_unitOfWork.DirectorRepository.GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
-            ViewBag.Genre = new SelectList(_unitOfWork.GenreRepository.GetAll().ToList(), "GenreId", "Name", movie.GenreId);
+            ViewBag.Director = new SelectList(_unitOfWork.Repository<Director>().GetAll().ToList(), "DirectorId", "FirstName", movie.DirectorId);
+            ViewBag.Genre = new SelectList(_unitOfWork.Repository<Genre>().GetAll().ToList(), "GenreId", "Name", movie.GenreId);
             return View(movie);
         }
 
@@ -132,7 +132,7 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
                 return NotFound();
             }
 
-            var movie = _unitOfWork.MovieRepository
+            var movie = _unitOfWork.Repository<Movie>()
                 .Get(t => t.MovieId == id.Value, null, t => t.Director, t => t.Genre).FirstOrDefault();
             if (movie == null)
             {
@@ -147,7 +147,7 @@ namespace UnitOfWorkNRepositoryPattern.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            _unitOfWork.MovieRepository.DeleteById(id);
+            _unitOfWork.Repository<Movie>().DeleteById(id);
             _unitOfWork.Commit();
             return RedirectToAction(nameof(Index));
         }

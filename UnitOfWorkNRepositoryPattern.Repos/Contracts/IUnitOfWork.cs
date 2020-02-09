@@ -8,9 +8,7 @@ namespace UnitOfWorkNRepositoryPattern.Repos.Contracts
 {
     public interface IUnitOfWork : IDisposable
     {
-        public IGenericRepository<Movie> MovieRepository { get; }
-        public IGenericRepository<Director> DirectorRepository { get; }
-        public IGenericRepository<Genre> GenreRepository { get; }
+        public IGenericRepository<T> Repository<T>() where T : class;
         void Commit();
     }
 }
